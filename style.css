@@ -22,20 +22,25 @@ header img {
 }
 
 nav {
-    background-color: darkcyan;
+    overflow: hidden;
 }
-
-a.menu {
-    display: inline-block;
+nav a {
+    display: block;
     width: 25%;
-    padding: 15px 30px;
+    float: left;
     color: white;
-    text-decoration: none;
     text-align: center;
+    text-decoration: none;
+    background-color: darkcyan;
+    padding: 15px 30px;
+    font-size: 20px;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
-a.menu:hover {
+nav a:hover {
     background-color: crimson;
+    cursor: pointer;
 }
 
 .active {
@@ -81,4 +86,21 @@ footer {
     line-height: 40px;
     text-align: center;
     margin-top: 10px;
+}
+
+@media (max-width: 800px) {
+    nav a {
+        width: 50%;
+        font-size: 22px;
+    }
+    h1 {
+        font-size: :40px;
+    }
+}
+
+@media (max-width: 500px) {
+    nav a {
+        width: 100%;
+        font-size: 22px;
+    }
 }
